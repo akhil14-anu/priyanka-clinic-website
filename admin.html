@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#153e35"><title>Clinic Staff | Dr. Priyanka Reddy</title><link rel="stylesheet" href="styles.css"><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script defer src="admin.js"></script></head>
+<body class="admin-page">
+<header class="header"><div class="container nav-wrap"><a class="brand" href="index.html"><span class="brand-mark">PR</span><span><strong>Dr. Priyanka Reddy</strong><small>CLINIC STAFF AREA</small></span></a><a class="under-link" href="index.html">← Back to website</a></div></header>
+<main class="admin-main"><div class="container"><section class="admin-panel">
+<p class="eyebrow">STAFF ACCESS</p><h1>Appointment dashboard</h1>
+<p>This dashboard works only after you configure Supabase as explained in README.md. It does not use a hard-coded password. If backend settings are missing, the page will clearly say so.</p>
+<div id="setupWarning" class="status">Checking backend configuration…</div>
+<form id="loginForm" class="admin-form hidden"><label>Email<input type="email" name="email" required autocomplete="username"></label><label>Password<input type="password" name="password" required autocomplete="current-password"></label><button class="button" type="submit">Sign in</button></form>
+<div id="dashboard" class="hidden"><div class="admin-actions"><button class="button" id="refreshButton" type="button">Refresh requests</button><button class="button" id="logoutButton" type="button">Sign out</button></div><p id="dashboardStatus" class="status" role="status"></p><div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Date requested</th><th>Patient contact</th><th>Preferred visit</th><th>Note</th><th>Status</th><th>Action</th></tr></thead><tbody id="appointmentRows"></tbody></table></div></div>
+<p class="smallprint">Privacy: only authorized staff should access appointment requests. Do not use shared devices for staff sign-in. This page is not a substitute for reviewing the database access policies before going live.</p>
+</section></div></main>
+</body></html>

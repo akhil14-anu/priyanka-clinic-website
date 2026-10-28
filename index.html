@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#153e35">
+  <meta name="description" content="Dr. Priyanka Reddy Homeopathy Clinic — clinic information and appointment requests.">
+  <title>Dr. Priyanka Reddy | Homeopathy Clinic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Noto+Sans+Telugu:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="topline"><div class="container top-inner"><span data-i18n="topline">Thoughtful care. A personal approach.</span><span>☎ <a href="tel:+919155588488">+91 91555 88488</a></span></div></div>
+  <header class="header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="Clinic home"><span class="brand-mark">PR</span><span><strong>Dr. Priyanka Reddy</strong><small data-i18n="brandSub">HOMEOPATHY CLINIC</small></span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+      <nav id="mainNav" class="nav">
+        <a href="#about" data-i18n="navAbout">About</a><a href="#care" data-i18n="navCare">Our approach</a><a href="#visit" data-i18n="navVisit">Visit us</a>
+        <button class="language-btn" id="languageToggle" type="button" aria-label="Switch language">తెలుగు</button>
+        <a class="button button-small" href="#appointment" data-i18n="navBook">Request appointment</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-glow"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span><span data-i18n="eyebrow">PERSONAL • CONSIDERED • CARE</span></p>
+          <h1 data-i18n="heroTitle">Care that begins<br>with <em>listening.</em></h1>
+          <p class="hero-text" data-i18n="heroText">A welcoming space to discuss your health concerns, understand your options, and plan your next steps with care.</p>
+          <div class="hero-actions"><a class="button" href="#appointment" data-i18n="heroBook">Request a visit <span>↗</span></a><a class="text-link" href="#about" data-i18n="heroLearn">Meet the clinic <span>→</span></a></div>
+          <div class="hero-note"><span class="note-dot"></span><span data-i18n="heroNote">Appointment requests are confirmed by the clinic.</span></div>
+        </div>
+        <div class="hero-art" aria-label="Decorative botanical illustration">
+          <div class="art-circle circle-one"></div><div class="art-circle circle-two"></div>
+          <div class="art-card"><div class="leaf-stem"></div><div class="leaf l1"></div><div class="leaf l2"></div><div class="leaf l3"></div><div class="leaf l4"></div><div class="leaf l5"></div><div class="leaf l6"></div><div class="art-caption"><span>01 / 03</span><strong data-i18n="artCaption">A calmer conversation<br>about your wellbeing.</strong></div></div>
+          <div class="floating-seal"><span>✳</span><small data-i18n="seal">CARE<br>WITH TIME</small></div>
+        </div>
+      </div>
+      <div class="hero-bottom"><div class="container hero-bottom-inner"><span data-i18n="bottomLeft">A personal approach to every conversation</span><span>PALNADU ROAD · NARASARAOPET</span></div></div>
+    </section>
+
+    <section class="intro section" id="about">
+      <div class="container intro-grid">
+        <div><p class="eyebrow">01 — <span data-i18n="aboutEyebrow">WELCOME</span></p><h2 data-i18n="aboutTitle">A clinic where<br><em>you are heard.</em></h2></div>
+        <div class="intro-copy"><p data-i18n="aboutText">We believe a helpful consultation begins with listening carefully, discussing your concerns, and explaining the options available to you. Contact the clinic to ask questions or request a visit.</p><a href="#appointment" class="under-link" data-i18n="aboutLink">Start a conversation <span>↗</span></a></div>
+      </div>
+    </section>
+
+    <section class="care section" id="care">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow">02 — <span data-i18n="careEyebrow">OUR APPROACH</span></p><h2 data-i18n="careTitle">Care, with clarity.</h2></div><p data-i18n="careIntro">A considered visit should leave you better informed about your next steps.</p></div>
+        <div class="care-cards">
+          <article class="care-card"><span class="card-number">01</span><div class="line-icon">⌕</div><h3 data-i18n="card1Title">Listen first</h3><p data-i18n="card1Text">Share your concerns and questions in a respectful, welcoming setting.</p></article>
+          <article class="care-card featured"><span class="card-number">02</span><div class="line-icon">✳</div><h3 data-i18n="card2Title">Discuss options</h3><p data-i18n="card2Text">Talk through your questions and understand the available care options.</p></article>
+          <article class="care-card"><span class="card-number">03</span><div class="line-icon">↗</div><h3 data-i18n="card3Title">Plan next steps</h3><p data-i18n="card3Text">Get clear information about follow-up and when other medical care may be needed.</p></article>
+        </div>
+        <p class="medical-note" data-i18n="medicalNote">Important: Homeopathy has not been shown to be effective for treating health conditions by reliable scientific evidence. Do not delay or replace evidence-based medical care, prescribed treatment, vaccination, or emergency care.</p>
+      </div>
+    </section>
+
+    <section class="doctor section" id="doctor">
+      <div class="container doctor-grid">
+        <div class="doctor-art"><div class="doctor-initials">PR</div><span class="doctor-art-label" data-i18n="doctorArtLabel">YOUR CONSULTATION STARTS HERE</span></div>
+        <div class="doctor-copy"><p class="eyebrow">03 — <span data-i18n="doctorEyebrow">THE PRACTITIONER</span></p><h2 data-i18n="doctorTitle">Meet Dr. Priyanka Reddy.</h2><p data-i18n="doctorText">Contact the clinic to confirm the practitioner's qualifications, registration details, consultation availability, and whether the clinic is suitable for your needs.</p><div class="doctor-facts"><div><span data-i18n="factLanguage">Languages</span><strong data-i18n="factLanguageValue">Telugu · English</strong></div><div><span data-i18n="factHours">Clinic hours</span><strong>10 AM–1 PM · 6 PM–9 PM</strong></div></div><a class="under-link" href="#appointment" data-i18n="doctorLink">Ask about a consultation <span>↗</span></a></div>
+      </div>
+    </section>
+
+    <section class="appointment section" id="appointment">
+      <div class="container appointment-grid">
+        <div class="appointment-copy"><p class="eyebrow">04 — <span data-i18n="bookEyebrow">APPOINTMENTS</span></p><h2 data-i18n="bookTitle">Let's find a time<br><em>that works for you.</em></h2><p data-i18n="bookText">Send an appointment request. The clinic will need to confirm your date and time before your visit is booked.</p><div class="booking-points"><span>✓ <span data-i18n="bookPoint1">Simple appointment request</span></span><span>✓ <span data-i18n="bookPoint2">Confirmation from the clinic</span></span><span>✓ <span data-i18n="bookPoint3">WhatsApp option available</span></span></div><p class="privacy-note" data-i18n="privacyNote">Please do not include diagnoses, test results, or other sensitive medical details in this form.</p></div>
+        <form id="appointmentForm" class="booking-form">
+          <div class="form-heading"><span data-i18n="formLabel">APPOINTMENT REQUEST</span><span class="form-step">01 / 01</span></div>
+          <div class="form-row"><label><span data-i18n="nameLabel">Your name</span><input name="name" required maxlength="80" autocomplete="name" placeholder="Full name"></label><label><span data-i18n="phoneLabel">Phone number</span><input name="phone" required type="tel" maxlength="18" autocomplete="tel" placeholder="+91"></label></div>
+          <div class="form-row"><label><span data-i18n="dateLabel">Preferred date</span><input name="preferred_date" required type="date" id="preferredDate"></label><label><span data-i18n="timeLabel">Preferred time</span><select name="preferred_time" required><option value="">Select a time</option><option>10:00 AM–11:00 AM</option><option>11:00 AM–12:00 PM</option><option>12:00 PM–1:00 PM</option><option>6:00 PM–7:00 PM</option><option>7:00 PM–8:00 PM</option><option>8:00 PM–9:00 PM</option></select></label></div>
+          <label><span data-i18n="languageLabel">Preferred language</span><select name="language"><option>Telugu</option><option>English</option></select></label>
+          <label><span data-i18n="messageLabel">Short note (optional — no medical details)</span><textarea name="message" rows="3" maxlength="250" placeholder="For example: first visit or follow-up"></textarea></label>
+          <label class="consent"><input type="checkbox" required><span data-i18n="consentText">I understand this is a request, not a confirmed appointment, and the clinic will contact me.</span></label>
+          <button class="button button-full" type="submit" data-i18n="submitButton">Send request via WhatsApp <span>↗</span></button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          <p class="form-foot" data-i18n="formFoot">This version opens WhatsApp and does not save booking data to a database. See README to configure secure online booking and admin access.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="visit section" id="visit">
+      <div class="container visit-grid">
+        <div><p class="eyebrow">05 — <span data-i18n="visitEyebrow">FIND THE CLINIC</span></p><h2 data-i18n="visitTitle">Your next step<br><em>starts here.</em></h2><p data-i18n="visitText">Call ahead to confirm today's availability before travelling.</p><div class="visit-details"><div><span class="detail-icon">⌖</span><p><strong data-i18n="addressLabel">Address</strong><br><span data-i18n="addressValue">Palnadu Road, behind LG Showroom, Narasaraopet</span></p></div><div><span class="detail-icon">◷</span><p><strong data-i18n="hoursLabel">Consultation hours</strong><br>10:00 AM–1:00 PM<br>6:00 PM–9:00 PM</p></div><div><span class="detail-icon">☎</span><p><strong data-i18n="phoneLabel2">Phone</strong><br><a href="tel:+919155588488">+91 91555 88488</a></p></div></div><a class="button" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=Dr.+Priyanka+Reddy+Homeopathy+Clinic+Palnadu+Road+Narasaraopet" data-i18n="mapButton">Open directions ↗</a></div>
+        <div class="map-frame"><iframe title="Search for the clinic on Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Palnadu+Road+Narasaraopet&output=embed"></iframe><div class="map-caption"><span>16°14′ N · NARASARAOPET</span><strong data-i18n="mapCaption">Plan your visit</strong></div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container footer-top"><a class="brand brand-light" href="#home"><span class="brand-mark">PR</span><span><strong>Dr. Priyanka Reddy</strong><small data-i18n="brandSub">HOMEOPATHY CLINIC</small></span></a><p data-i18n="footerText">Clear information. Thoughtful conversations. Informed choices.</p><a class="whatsapp-link" target="_blank" rel="noopener noreferrer" href="https://wa.me/919155588488" data-i18n="whatsappLink">Chat on WhatsApp ↗</a></div><div class="container footer-bottom"><span>© <span id="year"></span> Dr. Priyanka Reddy Homeopathy Clinic</span><a href="admin.html" data-i18n="adminLink">Staff sign in</a><span data-i18n="footerDisclaimer">Website information is not a substitute for medical advice.</span></div></footer>
+</body>
+</html>
